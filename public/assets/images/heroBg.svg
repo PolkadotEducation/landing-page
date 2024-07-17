@@ -1,0 +1,25 @@
+<svg width="1440" height="752" viewBox="0 0 1440 752" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_354_235)">
+<circle opacity="0.6" cx="1290" cy="166" r="203" fill="#552BBF"/>
+<circle opacity="0.6" cx="913" cy="548" r="84" fill="#BEE52E"/>
+<g filter="url(#filter0_b_354_235)">
+<path d="M0 0H1440V752H0V0Z" fill="#F3F5FB"/>
+</g>
+<rect x="-97" y="680" width="351" height="72" fill="#321D47"/>
+<rect x="1440" y="610" width="684" height="71.9999" transform="rotate(-180 1440 610)" fill="#321D47"/>
+<rect y="610" width="471" height="72" fill="#BEE52E"/>
+<rect x="1454" y="682" width="471" height="72" transform="rotate(-180 1454 682)" fill="#BEE52E"/>
+<rect x="1440" y="538" width="477" height="72" transform="rotate(-180 1440 538)" fill="#FF69B9"/>
+</g>
+<defs>
+<filter id="filter0_b_354_235" x="-100" y="-100" width="1640" height="952" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="50"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_354_235"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_354_235" result="shape"/>
+</filter>
+<clipPath id="clip0_354_235">
+<rect width="1440" height="752" fill="white"/>
+</clipPath>
+</defs>
+</svg>
