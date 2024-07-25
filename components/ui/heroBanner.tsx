@@ -3,8 +3,11 @@ import Image from "next/image";
 import { Button } from "./button";
 import { mobile } from "@/public/assets/images";
 import { motion } from "framer-motion"
+import { useTranslations } from 'next-intl';
 
 const HeroBanner = () => {
+  const t = useTranslations('lp');
+
   return (
     <div className="flex flex-col md:flex-row w-full max-w-[1320px] pt-12 md:pt-[120px] px-5 md:relative">
       <motion.div
@@ -15,14 +18,14 @@ const HeroBanner = () => {
         <div className="flex md:max-w-[50%]">
           <div className="flex-col">
             <h2 className="unbound-font md:text-6xl text-[34px] mb-4 md:mb-6 font-bold md:font-light">
-              Discover the Possibilities of Blockchain
+              {t('hero-title')}
             </h2>
             <p className="mb-6 md:mb-8 text-[#4D4D4D]">
-              Our comprehensive blockchain and Polkadot course gives you the opportunity to dive head first into the revolutionary world of decentralization. Learn from industry-leading experts and master the essential skills needed to navigate the blockchain space and leverage Polkadot full potential.
+              {t('hero-description')}
             </p>
             <div className="mb-8 md:mb-0">
               <Button onClick={() => window.location.href = 'http://app.polkadot.education'} size="lg">
-                Get started
+                {t('get-started')}
               </Button>
             </div>
           </div>

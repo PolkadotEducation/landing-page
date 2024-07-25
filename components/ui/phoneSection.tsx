@@ -3,6 +3,7 @@ import { Button } from "./button";
 import Image from "next/image";
 import { phoneBottom, phoneTop } from "@/public/assets/images";
 import { motion, Variants } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const textVariants: Variants = {
   offscreen: {
@@ -36,6 +37,7 @@ const imageVariants: Variants = {
 };
 
 const PhoneSection = () => {
+  const t = useTranslations('lp');
   return (
     <div className="flex flex-col max-w-[1320px] px-5 py-[32px] md:py-[82px] md:relative mb-8 md:mb-0">
       <motion.div
@@ -82,23 +84,23 @@ const PhoneSection = () => {
         <div className="flex flex-col md:max-w-[35%] text-white">
           <motion.div variants={textVariants}>
             <h3 className="font-bold md:font-light unbound-font text-[48px] mb-[16px]">
-              Learn from anywhere
+              {t('learn-anywhere-title')}
             </h3>
           </motion.div>
           <motion.div variants={textVariants}>
             <p className="text-[16px] mb-[16px]">
-              Don’t miss the opportunity to develop essential skills to lead the next digital era. Join us on this exciting journey and discover how blockchain and Polkadot are shaping the future. We look forward to helping you achieve your goals and become an expert in this dynamic and innovative field. 
+              {t('learn-anywhere-description-1')}
             </p>
           </motion.div>
           <motion.div variants={textVariants}>
             <p className="text-[16px] mb-8 md:mb-12">
-              Let’s start the transformation together - click below to sign up now!
+              {t('learn-anywhere-description-2')}
             </p>
           </motion.div>
           <motion.div variants={textVariants}>
             <div>
               <Button variant="outline" onClick={() => window.location.href = 'http://app.polkadot.education'} size="lg">
-                Sign Up
+                {t('sign-up')}
               </Button>
             </div>
           </motion.div>

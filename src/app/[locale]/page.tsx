@@ -6,8 +6,11 @@ import LearnItem from "@/components/ui/learnItem";
 import PhoneSection from "@/components/ui/phoneSection";
 import PersonaCard from "@/components/ui/personaCard";
 import Footer from "@/components/ui/footer";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations('lp');
+
   return (
     <main className="flex min-h-screen w-screen flex-col items-center bg-white">
       <div className="flex flex-col items-center max-w-[1320px]">
@@ -20,10 +23,10 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center mt-[64px] px-5 text-center">
           <h3 className="text-[34px] md:text-[48px] font-bold md:font-light unbound-font mb-2">
-            What You Will Learn
+            {t('learn-section-title')}
           </h3>
           <p className="mb-6 md:mb-16">
-            Understand the fundamentals of blockchain and its application in different sectors.
+            {t('learn-section-description')}
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
             {LEARN_ITEMS.map((i, index) =>
@@ -42,7 +45,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center justify-center mt-8 md:mt-16">
         <h3 className="text-[34px] md:text-[48px] font-bold md:font-light unbound-font">
-          Who is it for?
+          {t('persona-title')}
         </h3>
         <div className="flex flex-col gap-y-10 md:gap-y-20">
           {PERSONA_LIST.map(i =>

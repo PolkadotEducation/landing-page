@@ -1,8 +1,10 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const PersonaCard = ({ title, bullets, image }: { title: string, bullets: string[], image: StaticImageData }) => {
+  const t = useTranslations('lp');
   return (
     <div className="flex flex-col md:flex-row md:max-w-[1144px] md:justify-between items-center justify-center px-5">
       <Image
@@ -13,7 +15,7 @@ const PersonaCard = ({ title, bullets, image }: { title: string, bullets: string
       />
       <div className="flex flex-col md:w-[50%] mt-4 md:mt-0">
         <h6 className="unbound-font text-[20px] mb-4 font-semibold md:font-bold md:text-[34px] md:mb-6">
-          {title}
+          {t(title)}
         </h6>
         <motion.ul className="list-disc">
           {bullets.map(i =>
@@ -23,7 +25,7 @@ const PersonaCard = ({ title, bullets, image }: { title: string, bullets: string
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               >
-                <p className="text-[14px] md:text-[16px] text-[#4D4D4D]">{i}</p>
+                <p className="text-[14px] md:text-[16px] text-[#4D4D4D]">{t(i)}</p>
               </motion.li>
             </div>
           )}
