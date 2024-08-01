@@ -4,15 +4,13 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import favicon from './favicon.ico';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Polkadot Education",
   description: "Discover the Possibilities of Blockchain!",
-  icons: {
-    icon: "/favicon.ico",
-  },
   openGraph: {
     title: 'Polkadot Education',
     description: 'Discover the Possibilities of Blockchain!',
@@ -21,6 +19,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
+  icons: [{ rel: "icon", url: favicon.src }],
 };
 
 export default async function LocaleLayout({
