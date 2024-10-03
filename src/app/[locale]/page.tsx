@@ -44,10 +44,12 @@ export default function Home() {
         <PhoneSection />
       </div>
       <div className="flex flex-col items-center justify-center mt-8 md:mt-16">
-        <h3 className="text-[34px] md:text-[48px] font-bold md:font-light unbound-font">
-          {t('persona-title')}
-        </h3>
-        <div className="flex flex-col gap-y-10 md:gap-y-20">
+        <div className="px-6">
+          <h3 className="text-[34px] md:text-[48px] font-bold md:font-light unbound-font md:mb-[70px]">
+            {t('persona-title')}
+          </h3>
+        </div>
+        <div className="flex flex-col md:flex-row md:gap-y-20 md:gap-x-6">
           {PERSONA_LIST.map(i =>
             <PersonaCard
               key={i.title}
