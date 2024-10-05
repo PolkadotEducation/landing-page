@@ -19,13 +19,10 @@ export function useMediaQuery(query: string): boolean {
       setMatches(event.matches);
     };
 
-    // Set the initial state
     setMatches(mediaQueryList.matches);
 
-    // Add event listener
     mediaQueryList.addEventListener("change", handleChange);
 
-    // Clean up the event listener on component unmount
     return () => {
       mediaQueryList.removeEventListener("change", handleChange);
     };
