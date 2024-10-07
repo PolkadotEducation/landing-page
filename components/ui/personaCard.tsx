@@ -6,15 +6,19 @@ import { useTranslations } from "next-intl";
 const PersonaCard = ({ title, bullets, image }: { title: string, bullets: string[], image: StaticImageData }) => {
   const t = useTranslations('lp');
   return (
-    <div className="flex flex-col md:flex-row md:max-w-[1144px] md:justify-between items-center justify-center px-5">
-      <Image
-        src={image}
-        className="max-w-full max-h-full md:mr-5"
-        alt={title}
-        unoptimized
-      />
-      <div className="flex flex-col md:w-[50%] mt-4 md:mt-0">
-        <h6 className="unbound-font text-[20px] mb-4 font-semibold md:font-bold md:text-[34px] md:mb-6">
+    <div className="flex flex-col md:max-w-[422px] md:h-[606px] w-full items-center
+      px-6 py-8 md:border-[#E0E0E0] md:border-2 md:rounded-[8px]"
+    >
+      <div className="h-[45%]">
+        <Image
+          src={image}
+          className="w-[244px]"
+          alt={title}
+          unoptimized
+        />
+      </div>
+      <div className="flex flex-col items-center">
+        <h6 className="unbound-font text-[20px] mb-4 font-semibold md:font-bold md:text-[34px] md:mb-6 text-center">
           {t(title)}
         </h6>
         <motion.ul className="list-disc">
