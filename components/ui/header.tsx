@@ -21,14 +21,13 @@ const Header = () => {
 
   return (
     <div className="flex w-screen bg-white justify-center">
-      <div className="flex max-w-[1320px] w-full justify-between py-[14px] items-center px-5">
+      <div className="flex max-w-[1320px] w-full justify-between py-[8px] items-center px-5">
         <Image
-          priority
           src={isDesktop ? logo : logoMobile}
           alt="Logo"
-          width={isDesktop ? 248 : 29}
-          height={isDesktop ? 23 : 29}
-          className={isDesktop ? "w-[199px] h-[19px] md:w-[248px] md:h-[23px]" : "w-[29px] h-[29px]"}
+          width={isDesktop ? 166 : 29}
+          height={48}
+          className={isDesktop ? "w-[166px] h-[48px]" : "w-[29px] h-[48px]"}
           unoptimized
         />
         <div className="flex gap-x-4 md:gap-x-10 items-center">

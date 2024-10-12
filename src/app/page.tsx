@@ -60,9 +60,7 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className="bg-[#F3F5FB] w-full flex justify-center mt-6">
-        <Footer />
-      </div>
+      <Footer />
     </main>
   );
 }
